@@ -13,7 +13,6 @@ import lib
 import os
 import acount
 import json
-import ctypes
 import admin
 from cammand import loader as comlod
 print(sys.argv)
@@ -26,13 +25,6 @@ lang.getkang()
 
 
 current_directory = os.getcwd() + "/"
-
-
-def change_wallpaper(image_path):
-    bytes = [0x0014, 0x01, 0x02]
-    ctypes.windll.user32.SystemParametersInfoW(bytes[0], 0, image_path, bytes[1] | bytes[2])
-
-
 configss = json.loads(open("configs/bat.json", encoding="utf-8").read())
 
 
